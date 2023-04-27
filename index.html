@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>To-Do List</title>
+
+</head>
+
+<body>
+
+	<h1>Items-list</h1>
+
+	<input type="text" id="newItem" placeholder="Add New Item">
+
+	<button onclick="addItem()">Add</button>
+
+	<ul id="list"></ul>
+
+	
+
+	<script>
+
+		function addItem() {
+
+			var newItem = document.getElementById("newItem").value;
+
+			var textNode = document.createTextNode(newItem);
+
+			var liNode = document.createElement("LI");
+
+			liNode.appendChild(textNode);
+
+			document.getElementById("list").appendChild(liNode);
+
+			document.getElementById("newItem").value = "";
+
+		}
+
+	</script>
+
+</body>
+
+</html>
+
