@@ -14,6 +14,6 @@
     - name: remove container
       shell: docker container rm rockstar-container
     - name: remove docker image
-      shell: docker image rm chinthala2000/docker-job                            #name of images (docker images)
+      shell: docker image rm chinthala2000/webapplication-mon                            #name of images (docker images)
     - name: create new container
-      shell: docker container run -itd --name rockstar-container -p 8000:80 chinthala2000/docker-job     #(docker-job>> name of jenkins job)
+      shell: docker container run -itd --name rockstar-container -p 8000:80 chinthala2000/webapplication-mon     #(docker-job>> name of jenkins job)
