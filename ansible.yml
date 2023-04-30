@@ -1,10 +1,10 @@
 - hosts: all
   tasks:
     - name: stop container
-      shell:  docker container stop rockstar-container                    #name of container 
+      shell:  docker container stop app-container                    #name of container 
     - name: remove container
-      shell: docker container rm rockstar-container
+      shell: docker container rm app-container
     - name: remove docker image
-      shell: docker image rm chinthala2000/webapplication-mon                            #name of images (docker images)
+      shell: docker image rm chinthala2000/app-mon-devops                            #name of images (docker images)
     - name: create new container
-      shell: docker container run -itd --name rockstar-container -p 8000:80 chinthala2000/webapplication-mon
+      shell: docker container run -itd --name rockstar-container -p 8080:80 chinthala2000/app-mon-devops:latest
