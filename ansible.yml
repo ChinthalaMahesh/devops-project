@@ -5,6 +5,6 @@
     - name: remove container
       shell: docker container rm app-container
     - name: remove docker image
-      shell: docker image rm chinthala2000/app-mon-devops:latest                            #name of images (docker images)
+      shell: docker image rm chinthala2000/app-mon-devops:mahesh                      #name of images (docker images)
     - name: create new container
-      shell: docker container run -itd --name app-container -p 8080:80 chinthala2000/app-mon-devops:latest
+      shell: docker container run -itd --name app-container -p 9000:80 chinthala2000/app-mon-devops:mahesh
